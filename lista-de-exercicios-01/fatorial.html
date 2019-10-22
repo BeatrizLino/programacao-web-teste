@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Fatorial</title>
+    <style>
+        body{
+            font: normal 12pt arial;
+            color: rgb(23, 187, 138);
+        }
+        input{
+            font: normal 18pt Arial;
+            width: 100px;
+            color: rgb(23, 187, 138);
+        }
+        div#res{
+            margin-top: 15px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Calculando o fatorial</h1>
+    Número a ser fatorado: <input type="number" name="txtnumero" id="txtnumero">
+    <input type="button" value="Fatorar" onclick="fatorial()">
+    <div id= 'res'></div>
+    <script>
+        function fatorial(){
+            var numero = window.document.getElementById('txtnumero')
+            var valor = Number(numero.value)
+            var fat = 1
+        
+            for(var x = valor; x > 1 ; x--){
+                fat *= x
+            }
+            res.innerHTML = `Fatorial de ${valor} é ${fat}`
+        }
+    </script>
+</body>
+</html>
